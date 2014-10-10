@@ -36,6 +36,6 @@ Install meteor on your Mac with:
 
 Deploy your changes to the site with
 
-sudo meteor deploy crafteria.it
+`sudo meteor deploy crafteria.it`
 
 Your changes should show up in a minute or two if everything has gone correctly.
