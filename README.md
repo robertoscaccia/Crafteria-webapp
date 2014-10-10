@@ -1,28 +1,41 @@
-Telescope is an open-source, real-time social news site built with [Meteor](http://meteor.com)
+This is the repo for Crafteria.it.
 
-**Note:** Telescope is beta software. Most of it should work but it's still a little unpolished and you'll probably find some bugs. Use at your own risk :)
+It is built on top of Telescope an open-source, real-time social news site built with [Meteor](http://meteor.com).
 
 Note that Telescope is distributed under the [MIT License](http://opensource.org/licenses/MIT)
 
-### We Need Your Help!
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/TelescopeJS/Telescope?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+Get started by cloning this repo with:
 
-A lot of work has already gone into Telescope, but it needs that final push to reach its full potential. 
+`git clone https://github.com/jamnab/Crafteria-webapp.git`
 
-So if you'd like to be part of the project, please check out the [roadmap](https://trello.com/b/oLMMqjVL/telescope-roadmap) and [issues](https://github.com/TelescopeJS/Telescope/issues) to see if there's anything you can help with.
+### Editing the About Page
 
-### Learn More
+First navigate to the file about_page.html. You can find this under:
 
-- [Telescope Homepage](http://telesc.pe)
-- [Telescope Demo](http://demo2.telescopeapp.org)
-- [Telescope Documentation](http://telesc.pe/docs)
-- [Telescope Roadmap](https://trello.com/b/oLMMqjVL/telescope-roadmap)
-- [Telescope Meta](http://meta.telesc.pe/) – Discussions about Telescope
+```
+packages/telescope-static-pages/lib/client/templates
+```
 
-### Developing on Nitrous.IO
+From there you can edit the template by adding tags for specific uses:
 
-Start hacking on this app on
-[Nitrous.IO](https://www.nitrous.io/?utm_source=github.com&utm_campaign=Telescope&utm_medium=hackonnitrous)
-in seconds:
+`<h2></h2>` tags for headers.
+`<h3></h3>` tags for sub-headers.
+`<p></p>` tags for text.
+`<img src="">` tags for images where src is the link to the image.
 
-[![Hack TelescopeJS/Telescope on Nitrous.IO](https://d3o0mnbgv6k92a.cloudfront.net/assets/hack-l-v1-3cc067e71372f6045e1949af9d96095b.png)](https://www.nitrous.io/hack_button?source=embed&runtime=nodejs&repo=TelescopeJS%2FTelescope&file_to_open=README.nitrous.md)
+To edit the navigation link for the about page just open the about_link.html page in the same folder as the about_page.html.
+In that template is an `<a>` tag with the about title on it. Changing this will change the navigation label for the about page.
+
+### Saving Changes
+
+To save your changes you'll need to install meteor and deploy those changes.
+
+Install meteor on your Mac with:
+
+`curl https://install.meteor.com/ | sh`
+
+Deploy your changes to the site with
+
+sudo meteor deploy crafteria.it
+
+Your changes should show up in a minute or two if everything has gone correctly.
