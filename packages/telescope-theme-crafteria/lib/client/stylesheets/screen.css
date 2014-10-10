@@ -1,0 +1,81 @@
+/* orange:#da552f */
+body {
+  background:#fff;
+  font-family:'Montserrat', serif;
+}
+.header {
+  color:#999;
+  background-color:#fff;
+  box-shadow:0px 1px 0px 0px rgba(83,69,64,0.16),0px 1px 2px 0px rgba(0,0,0,0.1);;
+}
+.header .logo a, .header .logo a:visited {
+  color:#da552f;
+}
+.search .search-field {
+  -webkit-box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.11),inset 0px 0px 0px 1px rgba(0,0,0,0.13);
+  -moz-box-shadow:inset 0px 1px 2px 0px rgba(0,0,0,0.11),inset 0px 0px 0px 1px rgba(0,0,0,0.13);
+  box-shadow:inset 0px 1px 2px 0px rgba(0,0,0,0.11),inset 0px 0px 0px 1px rgba(0,0,0,0.13);
+}
+.posts-wrapper {
+  box-shadow:none;
+}
+.post {
+  border-bottom:none;
+}
+.post-upvote {
+  background:#EDECEB;
+  -webkit-box-shadow:0px 1px 0px 0px rgba(83,69,64,0.3),0px 1px 1px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow:0px 1px 0px 0px rgba(83,69,64,0.3),0px 1px 1px 0px rgba(0,0,0,0.2);
+  box-shadow:0px 1px 0px 0px rgba(83,69,64,0.3),0px 1px 1px 0px rgba(0,0,0,0.2);
+}
+.post-upvote .upvote-link {
+  height:52px;
+  padding-top:2px;
+}
+.icon-check > .points {
+  color:#555 !important;
+}
+.submit.button.header-submodule {
+  background-color:#fff;
+  font-size:14px;
+  color:#999 !important;
+}
+.header-submodule:hover, .submit.button.header-submodule:hover {
+  color:#da552f !important;
+}
+.post-rank {
+  display:none;
+}
+.post-upvote .upvote-link i {
+  height:60%;
+}
+.post-upvote .upvote-link.voted i.icon-check {
+  opacity:1;
+}
+.post-upvote .upvote-link.voted, .post-upvote .upvote-link.voted i.icon-check {
+  border:none;
+  color:#da552f;
+  font-size:14px;
+}
+.post-upvote .upvote-link.not-voted i.icon-up {
+  border:none;
+  color:#555;
+  font-size:14px;
+}
+.avatar.small.circle {
+  margin-top:2%;
+  width: 25px;
+  height: 25px;
+}
+.avatar.medium.circle {
+  width: 35px;
+  height: 35px;
+  display:inline;
+  vertical-align:middle;
+}
+.views-menu {
+  display:none;
+}
+.content-wrapper {
+  max-width:1200px;
+}

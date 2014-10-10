@@ -1,0 +1,15 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "upload-avatar": {}
+    },
+    "packages": {
+      "upload-avatar": {
+        "git": "https://github.com/particle4dev/upload-avatar-meteor.git",
+        "tag": "v0.1.0",
+        "commit": "b6148a2bb383a6739097ed3e42ead7392ac2b6e8"
+      }
+    }
+  }
+}

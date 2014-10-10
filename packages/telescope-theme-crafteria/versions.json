@@ -1,32 +1,12 @@
 {
   "dependencies": [
     [
-      "application-configuration",
-      "1.0.2"
-    ],
-    [
       "base64",
-      "1.0.0"
-    ],
-    [
-      "binary-heap",
       "1.0.0"
     ],
     [
       "blaze",
       "2.0.1"
-    ],
-    [
-      "callback-hook",
-      "1.0.0"
-    ],
-    [
-      "check",
-      "1.0.1"
-    ],
-    [
-      "ddp",
-      "1.0.9"
     ],
     [
       "deps",
@@ -37,24 +17,12 @@
       "1.0.3"
     ],
     [
-      "email",
-      "1.0.3"
-    ],
-    [
-      "follower-livedata",
-      "1.0.1"
-    ],
-    [
       "geojson-utils",
       "1.0.0"
     ],
     [
       "htmljs",
       "1.0.1"
-    ],
-    [
-      "http",
-      "1.0.6"
     ],
     [
       "id-map",
@@ -69,40 +37,12 @@
       "1.0.0"
     ],
     [
-      "livedata",
-      "1.0.10"
-    ],
-    [
-      "localstorage",
-      "1.0.0"
-    ],
-    [
-      "logging",
-      "1.0.3"
-    ],
-    [
       "meteor",
       "1.1.1"
     ],
     [
-      "meteorhacks:kadira",
-      "2.11.2"
-    ],
-    [
-      "meteorhacks:kadira-binary-deps",
-      "1.2.0"
-    ],
-    [
       "minimongo",
       "1.0.3"
-    ],
-    [
-      "mongo",
-      "1.0.6"
-    ],
-    [
-      "mongo-livedata",
-      "1.0.5"
     ],
     [
       "observe-sequence",
@@ -121,10 +61,6 @@
       "1.0.2"
     ],
     [
-      "retry",
-      "1.0.0"
-    ],
-    [
       "telescope-base",
       "0.0.0"
     ],
@@ -137,6 +73,10 @@
       "0.2.9"
     ],
     [
+      "telescope-theme-hubble",
+      "0.0.0"
+    ],
+    [
       "tracker",
       "1.0.2"
     ],
@@ -146,10 +86,6 @@
     ],
     [
       "underscore",
-      "1.0.0"
-    ],
-    [
-      "url",
       "1.0.0"
     ]
   ],

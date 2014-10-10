@@ -8,7 +8,6 @@
 standard-app-packages
 backbone
 accounts-base
-accounts-password
 accounts-twitter
 spiderable
 email
@@ -70,3 +69,5 @@ telescope-kadira
 service-configuration
 accounts-ui
 splendido:accounts-templates-unstyled
+telescope-theme-crafteria
+telescope-static-pages

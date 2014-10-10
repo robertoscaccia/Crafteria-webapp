@@ -1,7 +1,6 @@
 accounts-base@1.1.1
 accounts-facebook@1.0.1
 accounts-oauth@1.1.1
-accounts-password@1.0.2
 accounts-twitter@1.0.1
 accounts-ui-unstyled@1.1.2
 accounts-ui@1.1.1
@@ -55,6 +54,7 @@ meteor-platform@1.1.1
 meteor@1.1.1
 meteorhacks:async@1.0.0
 meteorhacks:fast-render@1.1.2
+meteorhacks:kadira-binary-deps@1.2.0
 meteorhacks:kadira@2.11.2
 meteorhacks:npm@1.2.0
 meteorhacks:subs-manager@1.1.0
@@ -67,7 +67,6 @@ mrt:cookies@0.3.0
 mrt:jquery-hotkeys@0.0.1
 mrt:mailchimp@0.4.0
 mrt:moment@2.8.1
-npm-bcrypt@0.7.7
 npm-container@1.0.0
 oauth1@1.1.0
 oauth2@1.1.0
@@ -93,7 +92,6 @@ spacebars@1.0.2
 spiderable@1.0.3
 splendido:accounts-templates-core@0.9.9
 splendido:accounts-templates-unstyled@0.9.9
-srp@1.0.0
 standard-app-packages@1.0.2
 stylus@1.0.4
 telescope-api@0.0.0
@@ -109,8 +107,10 @@ telescope-newsletter@0.1.0
 telescope-notifications@0.1.0
 telescope-rss@0.0.0
 telescope-search@0.0.0
+telescope-static-pages@0.1.0
 telescope-tags@0.0.0
 telescope-theme-base@0.0.0
+telescope-theme-crafteria@0.1.0
 telescope-theme-hubble@0.0.0
 telescope-update-prompt@0.1.0
 templating@1.0.7
