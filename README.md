@@ -21,6 +21,7 @@ From there you can edit the template by adding tags for specific uses:
 * `<h2></h2>` tags for headers.
 * `<h3></h3>` tags for sub-headers.
 * `<p></p>` tags for text.
+* `<a></a>` tags for links.
 * `<img src="">` tags for images where src is the link to the image.
 
 To edit the navigation link for the about page just open the about_link.html page in the same folder as the about_page.html.
