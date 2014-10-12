@@ -6,6 +6,13 @@ Meteor.startup(function () {
       if(!!author)
         return getAvatarUrl(author); // ALSO DEPRECATED
     },
+    authorName: function(){
+      return getAuthorName(this);
+    },
+    profileUrl: function () {
+      var author = Meteor.users.findOne(this.userId, {reactive: false});
+      return getProfileUrl(author);
+    },
     sourceLink: function(){
       return !!this.url ? this.url : getSiteUrl() + "posts/"+this._id;
     },

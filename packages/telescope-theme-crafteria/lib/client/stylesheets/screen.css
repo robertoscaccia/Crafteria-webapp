@@ -6,7 +6,9 @@ body {
 .header {
   color:#999;
   background-color:#fff;
-  box-shadow:0px 1px 0px 0px rgba(83,69,64,0.16),0px 1px 2px 0px rgba(0,0,0,0.1);;
+  -webkit-box-shadow:0px 1px 0px 0px rgba(83,69,64,0.16),0px 1px 2px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow:0px 1px 0px 0px rgba(83,69,64,0.16),0px 1px 2px 0px rgba(0,0,0,0.1);
+  box-shadow:0px 1px 0px 0px rgba(83,69,64,0.16),0px 1px 2px 0px rgba(0,0,0,0.1);
 }
 .header .logo a, .header .logo a:visited {
   color:#da552f;
@@ -62,20 +64,91 @@ body {
   color:#555;
   font-size:14px;
 }
-.avatar.small.circle {
-  margin-top:2%;
-  width: 25px;
-  height: 25px;
-}
 .avatar.medium.circle {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   display:inline;
-  vertical-align:middle;
+  margin-top:15%;
+}
+.avatar.big.circle {
+  width: 80px;
+  height: 80px;
+  margin-top:5%;
+  margin-left:15%;
+}
+.user-menu {
+  display:inline;
 }
 .views-menu {
   display:none;
 }
-.content-wrapper {
-  max-width:1200px;
+a.mt-share-inline-square-sm, a.mt-share-inline-square-sm:hover {
+  background:transparent;
+}
+span.count {
+  margin-left:25%;
+}
+.post-share.right-center.cell {
+  margin-right:0;
+}
+.post-discuss > a .count {
+  color:#ff0000;
+
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  -ms-border-radius:50%;
+  -o-border-radius:50%;
+  border-radius:50%;
+
+  height:45%;
+  width:45%;
+  font-size:18px;
+  font-weight:normal;
+  padding-top:5px;
+
+  background-image:url(/img/circle.png);
+  background-size:cover;
+  vertical-align:middle;
+}
+.user-menu > .user-dropdown {
+  position: absolute;
+  padding-top: 10%;
+  z-index: 10000;
+  background: #fff;
+  padding: 10px;
+  min-width: 140px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border:1px solid #eee;
+  display:none;
+  left:-50px;
+  text-align:center;
+}
+.user-menu > .user-dropdown:before, .user-menu > .user-dropdown:after {
+  content: "";
+  position: absolute;
+  top:-20px;
+  left: 60px;
+  z-index: 10001;
+  border: solid transparent;
+  border-bottom-color: #fff;
+}
+.user-menu > .user-dropdown:before {
+  border-width:11px;
+  top:-22px;
+  left:59px;
+  border-bottom-color:#eee;
+}
+.user-menu > .user-dropdown:after {
+  border-width:10px;
+}
+.user-menu:hover .user-dropdown {
+  display:block;
+}
+a.mt-share-inline-square-sm img {
+  width:42px;
+}
+.post-discuss {
+  vertical-align:middle;
 }

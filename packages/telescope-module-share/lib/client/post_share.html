@@ -1,11 +1,25 @@
 <template name="postShare">
-  <a href="{{profileUrl}}"><img class="avatar medium circle" src="{{userAvatar}}"/></a>
+  <!--<a href="{{profileUrl}}"><img class="avatar medium circle" src="{{userAvatar}}"/></a>-->
+  <div class="user-menu has-dropdown dropdown">
+    <a class="view dropdown-top-level" href="/"><img class="avatar medium circle" src="{{userAvatar}}"/></a>
+    <div class="user-dropdown">
+      <ul role="menu" aria-labelledby="dLabel">
+        <li><img class="avatar big circle" src="{{userAvatar}}"/></li>
+        <li>{{profile.bio}}</li>
+        <li><a href="{{profileUrl}}">{{authorName}}</a></li>
+        </ul>
+    </div>
+  </div>
   <!--{{>avatar user=this cssClass="avatar medium circle"}}-->
-  <a href="#" class="share-link"><i class="icon-share"></i><span class="action">{{i18n 'Share'}}</span></a>
-  <div class="share-options hidden">
+  <!--<a href="#" class="share-link"><i class="icon-share"></i><span class="action">{{i18n 'Share'}}</span></a>-->
+<a class="mt-facebook mt-share-inline-square-sm" href="https://www.facebook.com/sharer/sharer.php?u={{sourceLink}}" target="_blank"><img src="/img/fb.png"></a>
+<a class="mt-twitter mt-share-inline-square-sm" href="//twitter.com/intent/tweet?text={{title}}&url={{sourceLink}}&{{viaTwitter}}" target="_blank"><img src="/img/twt.png"></a>
+<!--  <div class="share-options">
     <a class="mt-facebook mt-share-inline-square-sm" href="https://www.facebook.com/sharer/sharer.php?u={{sourceLink}}" target="_blank"><img src="//mojotech-static.s3.amazonaws.com/facebook@2x.png"></a>
     <a class="mt-twitter mt-share-inline-square-sm" href="//twitter.com/intent/tweet?text={{title}}&url={{sourceLink}}&{{viaTwitter}}" target="_blank"><img src="//mojotech-static.s3.amazonaws.com/twitter@2x.png"></a>
     <a class="mt-linkedin mt-share-inline-square-sm" href="//www.linkedin.com/shareArticle?mini=true&url={{sourceLink}}&amp;summary={{title}}" target="_blank"><img src="//mojotech-static.s3.amazonaws.com/linkedin@2x.png"></a>
     <a class="mt-google mt-share-inline-square-sm" href="https://plus.google.com/share?url={{sourceLink}}" target="_blank"><img src="//mojotech-static.s3.amazonaws.com/google@2x.png"></a>
+
   </div>
+-->
 </template>
