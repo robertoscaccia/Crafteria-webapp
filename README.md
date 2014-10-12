@@ -39,4 +39,6 @@ Deploy your changes to the site with
 
 `sudo meteor deploy crafteria.it`
 
+Finally make sure that your ip address is pointing to the meteor site @ 107.22.210.133.
+
 Your changes should show up in a minute or two if everything has gone correctly.
