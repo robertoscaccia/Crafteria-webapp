@@ -19,6 +19,7 @@ iron:router@0.9.1
 
 meteorhacks:fast-render@1.0.0
 meteorhacks:subs-manager@1.1.0
+meteorhacks:kadira@2.5.2
 meteorhacks:npm
 
 aldeed:autoform
@@ -71,5 +72,3 @@ accounts-ui
 splendido:accounts-templates-unstyled
 telescope-theme-crafteria
 telescope-static-pages
-meteorhacks:kadira
-
