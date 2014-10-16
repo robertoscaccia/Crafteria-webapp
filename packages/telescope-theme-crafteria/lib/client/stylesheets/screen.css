@@ -14,6 +14,7 @@ body {
   color:#da552f;
 }
 .search .search-field {
+  font-size:17px;
   -webkit-box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.11),inset 0px 0px 0px 1px rgba(0,0,0,0.13);
   -moz-box-shadow:inset 0px 1px 2px 0px rgba(0,0,0,0.11),inset 0px 0px 0px 1px rgba(0,0,0,0.13);
   box-shadow:inset 0px 1px 2px 0px rgba(0,0,0,0.11),inset 0px 0px 0px 1px rgba(0,0,0,0.13);
@@ -37,9 +38,12 @@ body {
 .icon-check > .points {
   color:#555 !important;
 }
+.nav > li > a {
+  font-size:17px;
+}
 .submit.button.header-submodule {
   background-color:#fff;
-  font-size:14px;
+  font-size:18px;
   color:#999 !important;
 }
 .header-submodule:hover, .submit.button.header-submodule:hover {
@@ -85,32 +89,23 @@ body {
 a.mt-share-inline-square-sm, a.mt-share-inline-square-sm:hover {
   background:transparent;
 }
-span.count {
-  margin-left:25%;
-}
 .post-share.right-center.cell {
   margin-right:0;
 }
 .post-discuss > a .count {
-  color:#ff0000;
+  color:#da552f;
 
-  -webkit-border-radius:50%;
-  -moz-border-radius:50%;
-  -ms-border-radius:50%;
-  -o-border-radius:50%;
-  border-radius:50%;
-
-  height:45%;
-  width:45%;
   font-size:18px;
   font-weight:normal;
-  padding-top:5px;
 
-  background-image:url(/img/circle.png);
-  background-size:cover;
-  vertical-align:middle;
+  padding-top:19px;
 }
-.user-menu > .user-dropdown {
+.post-discuss .discuss-link {
+  background:url(/img/bubble.png) no-repeat;
+  background-size:60% 60%;
+  background-position:50% 80%;
+}
+.user-menu.x > .post-dropdown {
   position: absolute;
   padding-top: 10%;
   z-index: 10000;
@@ -125,30 +120,39 @@ span.count {
   left:-50px;
   text-align:center;
 }
-.user-menu > .user-dropdown:before, .user-menu > .user-dropdown:after {
+.icon-comment {
+  color:#da552f;
+}
+.user-menu.x > .post-dropdown:before, .user-menu.x > .post-dropdown:after {
   content: "";
   position: absolute;
-  top:-20px;
+  top:-18px;
   left: 60px;
   z-index: 10001;
   border: solid transparent;
   border-bottom-color: #fff;
 }
-.user-menu > .user-dropdown:before {
+.user-menu.x > .post-dropdown:before {
   border-width:11px;
-  top:-22px;
+  top:-20px;
   left:59px;
   border-bottom-color:#eee;
 }
-.user-menu > .user-dropdown:after {
+.user-menu.x > .post-dropdown:after {
   border-width:10px;
 }
-.user-menu:hover .user-dropdown {
+.user-menu.x:hover .post-dropdown {
   display:block;
 }
 a.mt-share-inline-square-sm img {
   width:42px;
 }
-.post-discuss {
-  vertical-align:middle;
+.posts-today-heading {
+  font-size:21px;
+  color:#da552f;
+  margin-top:25px;
+  margin-bottom:-18px;
+}
+.post-title {
+  margin-bottom:-5px;
 }

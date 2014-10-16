@@ -1,7 +1,8 @@
 <template name="postsDaily">
   {{#if postsLoaded}}
     <div class="grid">
-      {{#each days}}
+
+      <h1 class="posts-today-heading">Today</h1> {{#each days}}
         <h2 class="posts-day-heading">{{formatDate date "dddd, MMMM Do YYYY"}}</h2>
         <div class="posts-wrapper posts-day posts list grid-module">
           {{#if posts}}
