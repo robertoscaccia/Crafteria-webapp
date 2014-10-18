@@ -147,12 +147,33 @@ a.mt-share-inline-square-sm, a.mt-share-inline-square-sm:hover {
 a.mt-share-inline-square-sm img {
   width:42px;
 }
-.posts-today-heading {
-  font-size:21px;
-  color:#da552f;
-  margin-top:25px;
-  margin-bottom:-18px;
+.posts-day-heading {
+  font-size:14px;
+  color:#999;
 }
-br {
-  line-height:1px;
+.posts-today-heading {
+  font-size:18px;
+  color:#555;
+}
+.site-title {
+  font-size:18px;
+  color:#da552f;
+  margin:0;
+  margin-bottom:-10px;
+  margin-top:7px;
+  text-align:left;
+}
+.site-tagline {
+  font-size:14px;
+  color:#999;
+  text-align:left;
+}
+.header .logo {
+  position:relative;
+  float:left;
+  margin-right:5px;
+}
+.logo > br {
+  line-height:0px;
+  height:0px;
 }

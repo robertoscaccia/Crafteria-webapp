@@ -2,8 +2,9 @@
   {{#if postsLoaded}}
     <div class="grid">
 
-      <h1 class="posts-today-heading">Today</h1> {{#each days}}
-        <h2 class="posts-day-heading">{{formatDate date "dddd, MMMM Do YYYY"}}</h2>
+      <!--<h1 class="posts-today-heading">Today</h1>-->
+      {{#each days}}
+        <h2 class="posts-day-heading"><span class="posts-today-heading">{{formatDate date "dddd "}}</span>{{formatDate date " MMMM Do"}}</h2>
         <div class="posts-wrapper posts-day posts list grid-module">
           {{#if posts}}
             {{#each posts}}
