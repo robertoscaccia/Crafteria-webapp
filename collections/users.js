@@ -47,8 +47,12 @@ Schema.User = new SimpleSchema({
 // Meteor.users.attachSchema(Schema.User);
 
 Meteor.users.deny({
-  update: function(userId, post, fieldNames) {
-    console.log(fieldNames)
+  update: function(userId, post, fieldNames, modifier) {
+    var updates = modifier['$set'];
+    //deny updates when a user bio is over 50 characters
+    if (updates['profile.bio'] && updates['profile.bio'].length > 50)
+      return true;
+
     if(isAdminById(userId))
       return false;
     // deny the update if it contains something other than the profile field

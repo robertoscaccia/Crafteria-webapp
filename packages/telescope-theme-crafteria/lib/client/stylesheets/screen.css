@@ -38,9 +38,6 @@ body {
 .icon-check > .points {
   color:#555 !important;
 }
-.nav > li > a {
-  font-size:17px;
-}
 .submit.button.header-submodule {
   background-color:#fff;
   font-size:18px;
@@ -91,6 +88,7 @@ a.mt-share-inline-square-sm, a.mt-share-inline-square-sm:hover {
 }
 .post-share.right-center.cell {
   margin-right:0;
+  width:125px;
 }
 .post-discuss > a .count {
   color:#da552f;
@@ -111,13 +109,13 @@ a.mt-share-inline-square-sm, a.mt-share-inline-square-sm:hover {
   z-index: 10000;
   background: #fff;
   padding: 10px;
-  min-width: 140px;
+  width: 170px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   border:1px solid #eee;
   display:none;
-  left:-50px;
+  left: -68px;
   text-align:center;
 }
 .icon-comment {
@@ -127,7 +125,7 @@ a.mt-share-inline-square-sm, a.mt-share-inline-square-sm:hover {
   content: "";
   position: absolute;
   top:-18px;
-  left: 60px;
+  left: 72px;
   z-index: 10001;
   border: solid transparent;
   border-bottom-color: #fff;
@@ -135,7 +133,7 @@ a.mt-share-inline-square-sm, a.mt-share-inline-square-sm:hover {
 .user-menu.x > .post-dropdown:before {
   border-width:11px;
   top:-20px;
-  left:59px;
+  left:72px;
   border-bottom-color:#eee;
 }
 .user-menu.x > .post-dropdown:after {
@@ -171,9 +169,31 @@ a.mt-share-inline-square-sm img {
 .header .logo {
   position:relative;
   float:left;
-  margin-right:5px;
+  margin-right:10px;
 }
 .logo > br {
   line-height:0px;
   height:0px;
+}
+.posts-day-heading .search {
+  float:right;
+}
+input#search {
+  width:200px;
+}
+.user-menu.x > .post-dropdown {
+  left:-50%;
+}
+.secondary-nav {
+  line-height:100px;
+}
+header .user-menu {
+  top:12px;
+}
+div.post-dropdown > ul > li > img.avatar.big.circle {
+  margin-left:auto;
+  margin-right:auto;
+}
+div.user-bio {
+  color:#999;
 }

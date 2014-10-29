@@ -17,6 +17,10 @@ Meteor.startup(function () {
       var author = Meteor.users.findOne(this.userId, {reactive: false});
       return getTwitterName(author);
     },
+    getBio: function() {
+      var author = Meteor.users.findOne(this.userId, {reactive: false});
+      return author.profile.bio;
+    },
     sourceLink: function(){
       return !!this.url ? this.url : getSiteUrl() + "posts/"+this._id;
     },

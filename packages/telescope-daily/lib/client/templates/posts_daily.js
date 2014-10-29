@@ -29,7 +29,8 @@ Meteor.startup(function () {
       var days = Session.get('postsDays');
       for (i = 0; i < days; i++) {
         daysArray.push({
-          date: moment().subtract(i, 'days').startOf('day').toDate()
+          date: moment().subtract(i, 'days').startOf('day').toDate(),
+          index: i
         });
       }
       return daysArray;
@@ -40,6 +41,9 @@ Meteor.startup(function () {
     loadMoreUrl: function () {
       var count = parseInt(Session.get('postsDays')) + daysPerPage;
       return '/daily/' + count;
+    },
+    firstDay: function(index) {
+      return index === 0;
     }
   });
 

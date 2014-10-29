@@ -5,5 +5,4 @@ Meteor.startup(function () {
       template: getTemplate('aboutPage')
     });
   });
-  primaryNav.push('aboutLink');
 });

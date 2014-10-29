@@ -35,7 +35,9 @@
       </div>
       <div class="control-group">
         <label>{{i18n "Bio"}}</label>
-        <div class="controls"><textarea name="bio" type="text">{{profile.bio}}</textarea></div>
+        <div class="controls">
+          <input name="bio" type="text" value="{{profile.bio}}" maxlength="50" />
+        </div>
       </div>
       <div class="control-group">
       <label>Twitter Username</label>

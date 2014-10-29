@@ -6,10 +6,13 @@ Package.describe({
 
 Package.onUse(function (api) {
 
-  api.use(['telescope-theme-hubble'], ['client']);
+  api.use(['telescope-theme-hubble', 'templating', 'telescope-base'], ['client']);
 
   api.add_files([
     'lib/client/stylesheets/screen.css',
+    'lib/client/templates/navbar.js',
+    'lib/client/templates/nav_title.js',
+    'lib/client/templates/nav_title.html'
     ], ['client']);
 
 });

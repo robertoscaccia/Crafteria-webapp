@@ -1,6 +1,3 @@
-// push "search" template to primaryNav
-primaryNav.push('search');
-
 Searches = new Meteor.Collection("searches", {
   schema: new SimpleSchema({
     _id: {
