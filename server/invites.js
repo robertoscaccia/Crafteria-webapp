@@ -8,7 +8,6 @@ Meteor.methods({
     
     // invitation can either contain userId or an email address : 
     // { invitedUserEmail : 'bob@gmail.com' } or { userId : 'user-id' } 
-
     check(invitation, Match.OneOf(
       { invitedUserEmail : String },
       { userId : String }
@@ -49,7 +48,10 @@ Meteor.methods({
       });
       
       // update invinting user
-      Meteor.users.update(Meteor.userId(), {$inc:{inviteCount: -1}, $inc:{invitedCount: 1}});
+      Meteor.users.update(Meteor.userId(), {$inc: {
+        inviteCount: -1,
+        invitedCount: 1
+      }});
 
       if(user){
         // update invited user
