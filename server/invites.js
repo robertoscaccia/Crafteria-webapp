@@ -81,5 +81,32 @@ Meteor.methods({
     return {
       newUser : typeof user === 'undefined'
     };
+  },
+
+  checkIfInvited: function() {
+
+    //after a user signs up via a method like twitter they are asked for their email address.
+    //This needs to be checked against current invites
+
+    var user = Meteor.users.findOne(this.userId);
+
+    if (!user) {
+      throw new Meteor.Error(403, "You must be logged in");
+    }
+
+    var invite = Invites.findOne({ invitedUserEmail: user.profile.email });
+    if (invite) {
+      var invitedBy = Meteor.users.findOne({ _id : invite.invitingUserId });
+
+      Meteor.users.update(this.userId, {$set: {
+        isInvited: true,
+        invitedBy: invitedBy._id,
+        invitedByName: getDisplayName(invitedBy)
+      }});
+
+      Invites.update(invite._id, {$set : {
+        accepted : true
+      }});
+    }
   }
 });
