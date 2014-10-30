@@ -58,7 +58,8 @@ Meteor.methods({
         Meteor.users.update(user._id, {$set: {
           isInvited: true,
           invitedBy: Meteor.userId(),
-          invitedByName: getDisplayName(currentUser)
+          invitedByName: getDisplayName(currentUser),
+          invitedByAdmin: isAdmin(currentUser)
         }});
       } 
 

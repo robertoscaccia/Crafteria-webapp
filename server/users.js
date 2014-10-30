@@ -65,7 +65,8 @@ Accounts.onCreateUser(function(options, user){
       user = _.extend(user, {
         isInvited: true,
         invitedBy: invitedBy._id,
-        invitedByName: getDisplayName(invitedBy)
+        invitedByName: getDisplayName(invitedBy),
+        invitedByAdmin: isAdmin(invitedBy)
       });
 
       Invites.update(invite._id, {$set : {
