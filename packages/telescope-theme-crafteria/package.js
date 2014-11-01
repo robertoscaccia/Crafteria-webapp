@@ -11,7 +11,8 @@ Package.onUse(function (api) {
   api.add_files([
     'lib/client/stylesheets/screen.css',
     'lib/client/templates/nav_title.js',
-    'lib/client/templates/nav_title.html'
+    'lib/client/templates/nav_title.html',
+    'lib/moment-with-locale.min.js'
     ], ['client']);
 
 });

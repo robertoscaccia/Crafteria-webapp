@@ -44,6 +44,17 @@ Meteor.startup(function () {
     },
     firstDay: function(index) {
       return index === 0;
+    },
+    dayName: function(date, index) {
+      var lang = getSetting('language');
+
+      if (index === 0)
+        return i18n.translations[lang].Today;
+
+      if (index === 1)
+        return i18n.translations[lang].Yesterday;
+
+      return moment(date).format("dddd ");
     }
   });
 
