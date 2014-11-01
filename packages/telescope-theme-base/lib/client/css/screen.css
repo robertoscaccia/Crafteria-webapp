@@ -711,8 +711,7 @@ body {
 
 /* line 24, ../scss/specific/_layout.scss */
 .content-wrapper {
-  padding: 0 10px;
-  max-width: 1000px;
+  width: 950px;
   margin: 0 auto; }
   @media screen and (max-width: 40em) {
     /* line 24, ../scss/specific/_layout.scss */

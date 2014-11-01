@@ -92,16 +92,15 @@ a.mt-share-inline-square-sm, a.mt-share-inline-square-sm:hover {
 }
 .post-discuss > a .count {
   color:#da552f;
-
   font-size:18px;
   font-weight:normal;
-
-  padding-top:19px;
 }
 .post-discuss .discuss-link {
   background:url(/img/bubble.png) no-repeat;
-  background-size:60% 60%;
+  background-size:100% 100%;
   background-position:50% 80%;
+  top:8px;
+  margin-left:5px;
 }
 .user-menu.x > .post-dropdown {
   position: absolute;
@@ -153,12 +152,14 @@ a.mt-share-inline-square-sm img {
   font-size:18px;
   color:#555;
 }
+.header .logo {
+  position:relative;
+  float:left;
+}
 .site-title {
   font-size:18px;
   color:#da552f;
   margin:0;
-  margin-bottom:-10px;
-  margin-top:7px;
   text-align:left;
 }
 .site-tagline {
@@ -166,9 +167,10 @@ a.mt-share-inline-square-sm img {
   color:#999;
   text-align:left;
 }
-.header .logo {
-  position:relative;
-  float:left;
+.site-title, site-tagline {
+  line-height: 1;
+}
+.header .logo-image {
   margin-right:10px;
 }
 .logo > br {
@@ -184,16 +186,30 @@ input#search {
 .user-menu.x > .post-dropdown {
   left:-50%;
 }
-.secondary-nav {
-  line-height:100px;
-}
-header .user-menu {
-  top:12px;
-}
 div.post-dropdown > ul > li > img.avatar.big.circle {
   margin-left:auto;
   margin-right:auto;
 }
 div.user-bio {
   color:#999;
+}
+.page-container {
+  width:950px;
+  margin:0 auto;
+}
+header .page-container {
+  height:60px;
+  padding:5px 0px;
+}
+div.post-discuss.right-right.cell {
+  margin-right:0px;
+}
+header .icon-plus {
+  padding:0px;
+}
+.secondary-nav {
+  line-height: 50px;
+}
+.header .user-menu .avatar.medium.circle {
+  margin-top:0px;
 }
