@@ -22,6 +22,9 @@ Template[getTemplate('notificationsMenu')].helpers({
     var notifications=Notifications.find({userId: Meteor.userId(), read: false}).fetch();
     if(notifications.length==0)
       return 'no-notifications';
+  },
+  notification_length: function() {
+    return Notifications.find({userId: Meteor.userId(), read: false}).count();
   }
 });
 

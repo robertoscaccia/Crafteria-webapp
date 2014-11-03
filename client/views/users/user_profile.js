@@ -1,8 +1,8 @@
 Template[getTemplate('user_profile')].created = function () {
-  Session.set('postsShown', 5);
-  Session.set('upvotedPostsShown', 5);
-  Session.set('downvotedPostsShown', 5);
-  Session.set('commentsShown', 5);
+  Session.set('postsShown', 20);
+  Session.set('upvotedPostsShown', 20);
+  Session.set('downvotedPostsShown', 20);
+  Session.set('commentsShown', 20);
 };
 
 Template[getTemplate('user_profile')].helpers({

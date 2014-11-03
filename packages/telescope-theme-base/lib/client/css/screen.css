@@ -598,7 +598,6 @@ li {
 /* line 3, ../scss/specific/_header.scss */
 .header {
   background: #444444;
-  margin-bottom: 10px;
   padding: 15px;
   color: white; }
   @media screen and (max-width: 40em) {
@@ -711,7 +710,6 @@ body {
 
 /* line 24, ../scss/specific/_layout.scss */
 .content-wrapper {
-  width: 950px;
   margin: 0 auto; }
   @media screen and (max-width: 40em) {
     /* line 24, ../scss/specific/_layout.scss */

@@ -1,0 +1,64 @@
+<template name="crafteria_user_profile">
+	{{#with user}}
+		<div class="profile-header">
+			<div class="page-container">
+				{{>avatar user=this cssClass="avatar huge circle"}}
+				<div class="user-info">
+					<div class="user-profile-username">{{profile.name}}</div>
+					<div class="user-profile-bio">{{profile.bio}}</div>
+					<div class="user-profile-joined">
+						{{#if getTwitterName}}<a href="https://twitter.com/{{getTwitterName}}" target="_blank">@{{getTwitterName}}</a>{{/if}}
+						{{i18n "Member since"}} {{memberSince}}</div>
+					</div>
+				<div class="profile-buttons">
+					{{#if canEditProfile}}
+						<a class="button inline" href="/users/{{slug}}/edit">{{i18n "Edit profile"}}</a>
+					{{/if}}
+					{{#if canInvite}}
+						{{#if inviteCount}}
+							<a class="button inline invite-link" href="#">{{i18n "Invite"}} ({{inviteCount}} {{i18n "left"}})</a>
+						{{else}}
+							<a class="button inline disabled" href="#">{{i18n "Invite (none left)"}}</a>
+						{{/if}}
+					{{/if}}
+				</div>
+				<div class="profile-tabs">
+					<ul>
+						{{#each tabs user}}
+							<li class='profile-tab {{#if isActive postType}}active{{/if}}'>
+								<strong>{{typeCount ..}}</strong>
+								{{typeString}}
+							</li>
+						{{/each}}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="page-container profile-posts">
+			{{#if typeComments}}
+				<table>
+					<thead>
+						<tr>
+							<td class="comment-col">Post</td>
+							<td>Comment</td>
+							<td class="comment-col"></td>
+						</tr>
+					</thead>
+					<tbody>
+						{{#each typePosts}}
+						<tr>
+						<td><a href="/posts/{{postId}}/">{{postTitle}}</a></td>
+						<td>{{{htmlBody}}}</td>
+						<td>{{timeAgo createdAt}}</td>
+						</tr>
+						{{/each}}
+					</tbody>
+				</table>
+			{{else}}
+				{{#each typePosts}}
+					{{> post_item}}
+				{{/each}}
+			{{/if}}
+		</div>
+	{{/with}}
+</template>

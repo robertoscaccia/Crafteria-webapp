@@ -1,5 +1,6 @@
 <template name="post_page">
   <div class="single-post grid">
+    <div class="page-container">
     <div class="posts">
       {{> UI.dynamic template=post_item}}
     </div>
@@ -8,5 +9,6 @@
     {{/if}}
     {{> UI.dynamic template=comment_form}}
     {{> UI.dynamic template=comment_list}}
+    </div>
   </div>
 </template>

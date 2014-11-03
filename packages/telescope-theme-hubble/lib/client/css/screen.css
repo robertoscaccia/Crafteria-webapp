@@ -291,7 +291,6 @@ em {
 /* line 1, ../scss/modules/_nav.scss */
 .header {
   background-color: #4e555d;
-  margin-bottom: 10px;
   position: relative;
   height: 60px;
   /* For modern browsers */
@@ -418,12 +417,12 @@ em {
 /* line 115, ../scss/modules/_nav.scss */
 .has-dropdown .user-menu .dropdown-menu {
   left: auto;
-  right: 10px; }
+ }
 
 /* line 119, ../scss/modules/_nav.scss */
 .has-dropdown .notifications-menu .dropdown-menu {
   left: auto;
-  right: 10px; }
+ }
 
 /* line 123, ../scss/modules/_nav.scss */
 .newsletter-dismiss {
