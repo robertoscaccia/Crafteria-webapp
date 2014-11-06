@@ -311,3 +311,37 @@ header .icon-plus {
   height:28px;
   margin-right:4px;
 }
+
+/* Mobile */
+
+@media screen and (max-width: 40em) {
+  .page-container {
+    width:25em;
+  }
+  .header {
+    background-color:#da552f; box-shadow:none;
+  }
+  .header .logo {
+    float:none;
+  }
+  .mobile-menu-button.button {
+    background:transparent;
+  }
+  .site-title {
+    padding:10px;
+  }
+  .header-submodule [href="/about"], a.account-link.sign-in, a.account-link.sign-up {
+    padding:10px;
+  }
+  input#search {
+    width:150px;
+  }
+  .post-heading br {
+    display:none;
+  }
+}
+@media screen and (max-width: 30em) {
+  .page-container {
+    width:22em;
+  }
+}

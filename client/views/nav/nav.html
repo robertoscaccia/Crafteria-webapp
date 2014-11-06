@@ -6,18 +6,23 @@
       </a>
 
       {{#if logo_url}}
-        <div class="logo logo-image header-module">
+        <div class="desktop-only logo logo-image header-module">
           <a href="/">
             <img src="{{logo_url}}" alt="{{site_title}}"/>
           </a>
           </div>
+          <div class="mobile-only logo logo-image header-module">
+            <a href="/">
+              <img src="/img/crafteria-white.png" alt="{{site_title}}"/>
+            </a>
+            </div>
         {{else}}
         <h1 class="logo header-module"><a href="/">{{site_title}}</a></h1>
       {{/if}}
 
       {{#if hasPrimaryNav}}
         <ul class="nav primary-nav desktop-nav {{dropdownClass}} header-module desktop-only">
-          
+
           {{#each primaryNav}}
             <li>
               {{> UI.dynamic template=getTemplate}}
