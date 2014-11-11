@@ -15,7 +15,7 @@ Meteor.startup(function () {
 });
 
 // Insert the 'More' menu item to the secondary nav.
-if (secondaryNav.indexOf('more') < 0)
+if (secondaryNav.indexOf('moreMenu') < 0)
   secondaryNav.splice(4, 0, 'moreMenu');
 
 if (typeof moreMenuNav == "undefined")
