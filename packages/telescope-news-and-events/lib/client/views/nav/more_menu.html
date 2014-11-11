@@ -1,0 +1,14 @@
+<template name = "moreMenu">
+  {{#if hasMoreMenuNav}}
+  <div class="dropdown header-submodule more-menu">
+    <a class="dropdown-top-level" href="/">More</a>
+    <div class="dropdown-menu">
+      <ul role="menu" aria-labelledby="dLabel">
+        {{#each moreMenuNav}}
+          {{>moreMenuItem}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  {{/if}}
+</template>
