@@ -30,7 +30,12 @@ Template[getTemplate('user_email')].events({
       } else {
         throwError(i18n.t('Thanks for signing up!'));
         // Meteor.call('addCurrentUserToMailChimpList');
-        Meteor.call('checkIfInvited');
+        var inviteCode = window.localStorage.getItem('inviteCode');
+        if (inviteCode) {
+          Meteor.call('checkIfInvited', inviteCode, function(err, res) {
+            window.localStorage.removeItem('inviteCode');
+          });
+        }
         trackEvent("new sign-up", {'userId': user._id, 'auth':'twitter'});
         Router.go('/');
       }

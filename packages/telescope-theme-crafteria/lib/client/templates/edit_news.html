@@ -1,0 +1,50 @@
+<template name="edit_news">
+  <div class="grid-small edit-items grid-module dialog admin">
+    <h2>News</h2>
+    <form class="form-block">
+      <h3>Add new news item</h3>
+      <div class="control-group">
+        <label>Name</label>
+        <div class="controls"><input id="name" type="text" value="" /></div>
+      </div>
+      <div class="control-group">
+        <label>Description</label>
+        <div class="controls"><input id="description" type="text" value="" /></div>
+      </div>
+      <div class="control-group">
+        <label>Link</label>
+        <div class="controls"><input id="link" type="text" value="" /></div>
+      </div>
+      <div class="control-group">
+        <label>Order</label>
+        <div class="controls"><input id="order" type="number" value="" /></div>
+      </div>
+      <div class="form-actions">
+        <input type="submit" class="button" value="Submit" />
+      </div>
+    </form>
+    <ul>
+      {{#each news}}
+        {{> news_item}}
+      {{/each}}
+    </ul>
+  </div>
+</template>
+
+
+<template name="news_item">
+  <li>      
+    <form>
+        <div class="control-group inline">
+          <a class="button submit edit-link" href="#">Save</a> 
+          <a class="button submit delete-link" href="#">Delete</a>
+          <div class="edit-item controls">
+            <input class="category-name" id="name_{{_id}}" type="text" value="{{name}}" placeholder="Name"/>
+            <input class="category-name" id="description_{{_id}}" type="text" value="{{description}}" placeholder="Description"/>
+            <input class="category-number" id="link_{{_id}}" type="text" value="{{link}}" placeholder="0"/>
+            <input class="category-number" id="order_{{_id}}" type="number" value="{{order}}" placeholder="0"/>
+          </div>
+        </div>
+      </form>
+  </li>
+</template>

@@ -11,7 +11,7 @@ addToSettingsSchema = [];
 // array containing nav items; initialize with views menu and admin menu
 primaryNav = ['navTitle', 'viewsMenu'];
 
-secondaryNav = ['adminMenu', 'categoriesMenu', 'notificationsMenu', 'aboutLink', 'submitButton', 'userMenu'];
+secondaryNav = ['adminMenu', 'notificationsMenu', 'aboutLink', 'moreMenu', 'submitButton', 'userMenu'];
 
 // array containing items in the admin menu
 adminNav = [];
@@ -129,6 +129,10 @@ postHeading = [
   {
     template: 'postDomain', 
     order: 5
+  },
+  {
+    template: 'postInfo',
+    order: 8
   }
 ]
 

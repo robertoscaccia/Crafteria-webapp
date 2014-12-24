@@ -8,7 +8,7 @@ getEmailTemplate = function (template) {
 buildEmailTemplate = function (htmlContent) {
 
   var emailProperties = {
-    headerColor: getSetting('headerColor', '#444444'),
+    headerColor: getSetting('headerColor', '#FFF'),
     buttonColor: getSetting('buttonColor', '#DD3416'),
     siteName: getSetting('title'),
     tagline: getSetting('tagline'),
@@ -17,7 +17,7 @@ buildEmailTemplate = function (htmlContent) {
     unsubscribe: '',
     accountLink: getSiteUrl()+'account',
     footer: getSetting('emailFooter'),
-    logoUrl: getSetting('logoUrl'),
+    logoUrl: getSiteUrl().substring(0, getSiteUrl().length - 1) + getSetting('logoUrl'),
     logoHeight: getSetting('logoHeight'),
     logoWidth: getSetting('logoWidth')
   }

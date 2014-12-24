@@ -29,6 +29,19 @@ Template[getTemplate('postContent')].helpers({
   },
   commentsDisplayText: function(){
     return this.comments == 1 ? i18n.t('comment') : i18n.t('comments');
+  },
+  truncatedBody: function(body) {
+    if (!body)
+      return "";
+    
+    var description = stripHTML(body);
+    if (description.length > 80) {
+      description = description.substring(0,80) + "...";
+    } else {
+      description = description.substring(0,80)
+    }
+
+    return description;
   }
 });
 

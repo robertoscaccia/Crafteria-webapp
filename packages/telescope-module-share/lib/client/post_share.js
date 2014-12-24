@@ -25,9 +25,30 @@ Meteor.startup(function () {
       return !!this.url ? this.url : getSiteUrl() + "posts/"+this._id;
     },
     viaTwitter: function () {
-      return !!getSetting('twitterAccount') ? 'via='+getSetting('twitterAccount') : '';
+      var twitterName = getSetting('twitterAccount');
+      return !!getSetting('twitterAccount') ? 'via='+twitterName.slice(1, twitterName.length) : '';
+    },
+    discussLink: function() {
+      return discussLink(this._id);
+    },
+    facebookLink: function() {
+      var facebook = ServiceConfiguration.configurations.findOne({service: 'facebook'});
+      if (!facebook) {
+        var sourceLink = !!this.url ? this.url : getSiteUrl() + "posts/"+this._id;
+        return "https://www.facebook.com/sharer/sharer.php?u=" + sourceLink;
+      } else {
+        return "https://www.facebook.com/dialog/share?" +
+          "app_id=" + facebook.appId +
+          "&display=popup" +
+          "&href=" + discussLink(this._id) +
+          "&redirect_uri=" + discussLink(this._id);
+      }
     }
   });
+
+  var discussLink = function(postId) {
+    return Meteor.absoluteUrl() + 'posts/' + postId;
+  }
 
   Template[getTemplate('postShare')].events({
     'click .share-link': function(e){

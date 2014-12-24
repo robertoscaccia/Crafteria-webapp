@@ -1,0 +1,7 @@
+<template name="crafteriaSearch">
+  {{#if canSearch}}
+    <div class="desktop-only search {{searchQueryEmpty}}">
+              <input id="search" type="search" class="search-field" placeholder="{{i18n 'search'}}" value="{{searchQuery}}">
+            </div>
+  {{/if}}
+</template>

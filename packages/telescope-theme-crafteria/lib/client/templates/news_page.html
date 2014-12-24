@@ -1,0 +1,26 @@
+<template name="newsPage">
+	<div class="page-container">
+		<h2 class="page-heading">{{i18n "News"}}</h2>
+		<div>
+			Notizie, blog posts, articoli sul mondo dell'innovazione in Italia e all'estero. 
+			Aiutaci a scoprirne di altri e a commentarli insieme per un'innovazione condivisa, ogni giorno.
+		</div>
+		<div class="grid">
+			{{#each news}}
+				<div class="post">
+					<div class="post-content">
+						<div class="post-info">
+							<h3 class="post-heading">
+								<a href="{{link}}" class="news-title" target="_blank">{{name}}</a>
+								<br>
+								<span class="post-description">{{description}}</span>
+								<br>
+								<a href="{{link}}"><span class="post-domain">{{link}}</span></a>
+							</h3>
+						</div>
+					</div>
+				</div>
+			{{/each}}
+		</div>
+	</div>
+</template>

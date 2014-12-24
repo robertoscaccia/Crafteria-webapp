@@ -18,8 +18,17 @@ Package.onUse(function (api) {
 
   api.add_files([
     'lib/client/templates/about_page.html',
+    'lib/client/templates/about_page.js',
     'lib/client/templates/about_link.html',
-    'lib/client/about.js'
+    'lib/client/about.js',
+    'lib/client/templates/leader_page.html',
+    'lib/client/templates/leader_page.js',
+    'lib/client/templates/share_page.html',
+    'lib/client/templates/share_page.js'
   ], ['client']);
+
+  api.add_files([
+    'lib/server/methods.js'
+    ], ['server']);
 
 });

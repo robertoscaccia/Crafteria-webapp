@@ -35,13 +35,13 @@ Meteor.methods({
       // don't allow duplicate multpile invite for the same person
       var existingInvite = Invites.findOne({ invitedUserEmail : userEmail }); 
 
-      if(existingInvite){
+      if(existingInvite && !isAdmin(currentUser)){
         throw new Meteor.Error(403, "Somebody has already invited this person.");
       }
 
       // create an invite
       // consider invite accepted if the invited person has an account already
-      Invites.insert({
+      var invite = Invites.insert({
         invitingUserId: Meteor.userId(),
         invitedUserEmail: userEmail,
         accepted: typeof user !== "undefined"
@@ -64,11 +64,11 @@ Meteor.methods({
       } 
 
       var communityName = getSetting('title','Telescope'),
-          emailSubject = 'You are invited to try '+communityName,
+          emailSubject = 'Sei stato invitato ad unirti a '+communityName,
           emailProperties = {
             newUser : typeof user === 'undefined',
             communityName : communityName,
-            actionLink : user ? getSigninUrl() : getSignupUrl(),
+            actionLink : user ? getSigninUrl() : (getSignupUrl() + "?inv=" + invite),
             invitedBy : getDisplayName(currentUser),
             profileUrl : getProfileUrl(currentUser)
           };
@@ -84,10 +84,12 @@ Meteor.methods({
     };
   },
 
-  checkIfInvited: function() {
+  checkIfInvited: function(inviteCode) {
 
     //after a user signs up via a method like twitter they are asked for their email address.
     //This needs to be checked against current invites
+
+    check(inviteCode, String);
 
     var user = Meteor.users.findOne(this.userId);
 
@@ -95,14 +97,15 @@ Meteor.methods({
       throw new Meteor.Error(403, "You must be logged in");
     }
 
-    var invite = Invites.findOne({ invitedUserEmail: user.profile.email });
+    var invite = Invites.findOne(inviteCode);
     if (invite) {
       var invitedBy = Meteor.users.findOne({ _id : invite.invitingUserId });
 
       Meteor.users.update(this.userId, {$set: {
         isInvited: true,
         invitedBy: invitedBy._id,
-        invitedByName: getDisplayName(invitedBy)
+        invitedByName: getDisplayName(invitedBy),
+        invitedByAdmin: isAdmin(invitedBy)
       }});
 
       Invites.update(invite._id, {$set : {

@@ -1,11 +1,17 @@
 <template name="posts_list">
+	<div class="page-container">
   {{> UI.dynamic template=postsListIncoming data=incoming}}
   <div class="posts-wrapper grid grid-module">
     <div class="posts list">
-      {{#each posts}}
-        {{> UI.dynamic template=post_item}}
-      {{/each}}
+    	{{#if posts}}
+	      {{#each posts}}
+	        {{> UI.dynamic template=post_item}}
+	      {{/each}}
+	     {{else}}
+	     	<h3 style="margin-top:20px;color:black;text-align:center;">Nessun risultato</h3>
+	     {{/if}}
     </div>
   </div>
   {{> UI.dynamic template=postsLoadMore}}
+	</div>
 </template>

@@ -167,7 +167,7 @@ Posts.before.update(function (userId, doc, fieldNames, modifier, options) {
 
 Meteor.methods({
   post: function(post){
-    var title = cleanUp(post.title),
+    var title = cleanUp(post.title).substring(0, 40),
         body = post.body,
         userId = this.userId,
         user = Meteor.users.findOne(userId),

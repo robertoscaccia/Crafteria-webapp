@@ -138,10 +138,13 @@ Template[getTemplate('post_submit')].events({
     var url=$("#url").val();
     var $getTitleLink = $(".get-title-link");
     $getTitleLink.addClass("loading");
+    if (url.substring(0, 5) !== "http:" && url.substring(0, 6) !== "https:")
+      url = ("http://" + url)
+
     if(url){
       $.get(url, function(response){
           if ((suggestedTitle=((/<title>(.*?)<\/title>/m).exec(response.responseText))) != null){
-              $("#title").val(suggestedTitle[1]);
+              $("#title").val(suggestedTitle[1].substring(0,40));
           }else{
               alert("Sorry, couldn't find a title...");
           }

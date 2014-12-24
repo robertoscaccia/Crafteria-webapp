@@ -1,0 +1,39 @@
+<template name="share">
+	<div class="page-container">
+  		<div class="page-heading form-block">Condividi con Crafteria links ad aziende, progetti e servizi che secondo te sono espressione di Innovazione in ambito tecnologico, artigiano e nel settore dei servizi. </div>
+
+  		<form class="grid-block form-horizontal">
+  			<div class="control-group">
+        	<label class="control-label">LINK 1 *</label>
+        	<div class="controls"><input id="link_1" type="text" placeholder="http://" /></div>
+      	</div>
+        <div class="control-group">
+          <label class="control-label">LINK 2 *</label>
+          <div class="controls"><input id="link_2" type="text" placeholder="http://" /></div>
+        </div>
+        <div class="control-group">
+          <label class="control-label">LINK 3 *</label>
+          <div class="controls"><input id="link_3" type="text" placeholder="http://" /></div>
+        </div>
+
+      	<div class="control-group">
+          <label class="control-label">DESCRIZIONE</label>
+          <div>(RACCONTACI BREVEMENTE IL PRODOTTO/SERVIZIO/AZIENDA)</div>
+          <div class="controls"><textarea id="description" rows="3"> </textarea></div>
+        </div>
+      	<div class="control-group">
+          <label class="control-label">NOME</label>
+          <div class="controls"><input id="name" type="text" value="" /></div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label">EMAIL</label>
+          <div class="controls"><input id="email" type="text" value="" /></div>
+        </div>
+      	<div class="form-actions">
+        	<input type="submit" class="button" value="{{i18n "Submit"}}" />
+      	</div>
+  		</form>
+
+  </div>
+</template>

@@ -1,0 +1,105 @@
+<template name="edit_events">
+  <div style="width:1000px;margin-right:auto;margin-left:auto;">
+    <div class="grid-small edit-items grid-module dialog admin" style="float:left">
+      <h2>Edit Events</h2>
+      <form class="form-block">
+        <h3>Add new event</h3>
+        <div class="control-group">
+          <label>Name</label>
+          <div class="controls"><input id="name" type="text" value="" /></div>
+        </div>
+        <div class="control-group">
+          <label>Description</label>
+          <div class="controls"><input id="description" type="text" value="" /></div>
+        </div>
+        <div class="control-group">
+          <label>Link</label>
+          <div class="controls"><input id="link" type="text" value="" /></div>
+        </div>
+        <div class="control-group">
+          <label>Date</label>
+          <div class="controls"><input id="date" type="text" value="" /></div>
+        </div>
+        {{#if event_categories}}
+        <div class="control-group">
+          <label class="control-label">{{i18n "Category"}}</label>
+          <div class="controls">
+            {{#each event_categories}}
+            <label class="radio inline">
+              <input id="category_{{_id}}" type="checkbox" value="{{_id}}" name="category" /> {{name}}
+            </label>
+            {{/each}}
+          </div>
+        </div>
+        {{/if}}
+        <div class="form-actions">
+          <input type="submit" class="button" id="event-submit" value="Submit" />
+        </div>
+      </form>
+      <ul>
+        {{#each _events}}
+          {{> event_item}}
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="grid-small edit-items grid-module dialog admin" style="float:right">
+      <h2>Edit Event Categories</h2>
+      <form class="form-block">
+        <h3>Add new event category</h3>
+        <div class="control-group">
+          <label>Name</label>
+          <div class="controls"><input id="category-name" type="text" value="" /></div>
+        </div>
+        <div class="control-group">
+        <label>Order</label>
+        <div class="controls"><input id="category-order" type="number" value="" /></div>
+        </div>
+        <div class="form-actions">
+          <input type="submit" class="button" id="category-submit" value="Submit" />
+        </div>
+      </form>
+      <ul>
+        {{#each event_categories}}
+          {{> category_item}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</template>
+
+
+<template name="event_item">
+  <li>      
+    <form>
+        <div class="control-group inline">
+          <a class="button submit edit-link" href="#">Save</a> 
+          <a class="button submit delete-link" href="#">Delete</a>
+          <div class="edit-item controls">
+            <input class="category-name" id="name_{{_id}}" type="text" value="{{name}}" placeholder="Name"/>
+            <input class="category-name" id="description_{{_id}}" type="text" value="{{description}}" placeholder="Description"/>
+            <input class="category-number" id="link_{{_id}}" type="text" value="{{link}}" placeholder="0"/>
+            <input class="category-number" id="date_{{_id}}" type="text" value="{{formatDate date 'MM/DD/YYYY'}}" placeholder="0"/>
+            {{#each event_categories}}
+            <input id="category_{{_id}}" type="checkbox" value="{{_id}}" name="event_{{../_id}}_category" {{checked ..}} /> {{name}}
+            {{/each}}
+          </div>
+        </div>
+      </form>
+  </li>
+</template>
+
+<template name="category_item">
+  <li>      
+    <form>
+        <div class="control-group inline">
+          <a class="button submit edit-link" href="#">Save</a>
+          <a class="button submit delete-link" href="#">Delete</a>
+          <div class="edit-item controls">
+            <input class="category-name" id="category_name_{{_id}}" type="text" value="{{name}}" placeholder="Name"/>
+            <input class="category-number" id="category_order_{{_id}}" type="number" value="{{order}}" placeholder="0"/>
+          </div>
+        </div>
+      </form>
+  </li>
+</template>

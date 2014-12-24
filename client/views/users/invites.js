@@ -28,9 +28,9 @@ AutoForm.hooks({
       clearSeenErrors();
 
       if(result && result.newUser){
-        throwError('An invite has been sent out. Thank you!');
+        throwError('Un invito è stato inviato. Grazie!');
       } else {
-        throwError('Thank you!');
+        throwError('Grazie!');
       }
       scrollUp();
     },

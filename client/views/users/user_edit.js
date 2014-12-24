@@ -59,6 +59,18 @@ Template[getTemplate('user_edit')].events({
       "profile.notifications.replies": $('input[name=notifications_replies]:checked').length
     };
 
+    if (isAdmin(Meteor.user())) {
+      var inviteCount = $target.find('[name=inviteCount]').val();
+      if (!isNaN(inviteCount)) {
+        _.extend(update, {
+          "inviteCount": parseInt(inviteCount)
+        });
+      } else {
+        //XX report error
+      }
+      
+    }
+
     var old_password = $target.find('[name=old_password]').val();
     var new_password = $target.find('[name=new_password]').val();
 

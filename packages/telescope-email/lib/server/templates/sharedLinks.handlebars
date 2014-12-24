@@ -1,0 +1,26 @@
+<span class="heading">
+3 links have been shared from the About page
+</span><br><br>
+
+<span>{{link1}}</span>
+<br>
+<span>{{link2}}</span>
+<br>
+<span>{{link3}}</span>
+<br><br>
+{{#if name}}
+<span>They were shared by {{name}}</span>
+{{else}}
+<span>They did not leave their name</span>
+{{/if}}
+<br><br>
+
+{{#if description}}
+	<span>They left this description: {{description}}</span>
+{{/if}}
+<br><br>
+
+{{#if email}}
+	<span>If you want to send them a message their email is {{email}}</span>
+{{/if}}
+<br><br>

@@ -24,6 +24,8 @@ Package.onUse(function (api) {
     'lib/server/templates/emailNewUser.handlebars',
     'lib/server/templates/emailTest.handlebars',
     'lib/server/templates/emailWrapper.handlebars',
+    'lib/server/templates/leaderApplication.handlebars',
+    'lib/server/templates/sharedLinks.handlebars'
   ], ['server']);
   
   api.export([

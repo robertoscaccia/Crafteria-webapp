@@ -1,0 +1,58 @@
+<template name="eventsPage">
+	<div class="page-container">
+		<h2 class="page-heading">{{i18n "Events"}}</h2>
+
+		<div>
+			<ul class="events-tabs">
+				{{#each tabs}}
+					<li class="event-tab {{#if isActive eventType}}active{{/if}}">{{i18n title}}</li>
+				{{/each}}
+			</ul>
+			<div class="has-dropdown event-categories-dropdown">
+			{{#if categories}}
+				<div class="dropdown user-menu">
+		      <a href="#" class="dropdown-head">{{head_category}}</a>
+		      <div class="dropdown-menu">
+		       <ul role="menu" aria-labelledby="dLabel">
+		         	{{#each categories}}
+				  			<li class="event-category-li">{{name}}</li>
+				  		{{/each}}
+		       </ul>
+	      </div>
+    </div>
+			{{/if}}
+			</div>
+			<div style="clear:both"></div>
+		</div>
+		<div>
+			Appuntamenti, classi, workshops, eventi, meetups per creare innovazione, connettersi con la comunità d'innovatori locale ed internazionale, ogni giorno.
+		</div>
+		<div class="grid">
+			{{#if _events}}
+			{{#each _events}}
+				<div class="post">
+					<div class="modules-group left-modules">
+						<div class="event-calendar">
+							<div class="month">{{shortDate date}}</div>
+							<div class="day">{{day date}}</div>
+						</div>
+					</div>
+					<div class="modules-group center-modules">
+						<div class="post-content">
+							<div class="post-info">
+								<h3 class="post-heading">
+									<a href="{{link}}" class="post-title" target="_blank">{{name}}</a>
+									<br>
+									<span class="post-description">{{description}}</span>
+								</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			{{/each}}
+			{{else}}
+			<h3 style="color:black;">{{i18n "No Events"}}</h3>
+			{{/if}}
+		</div>
+	</div>
+</template>

@@ -3,15 +3,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="initial-scale=1.0">    <!-- So that mobile webkit will display zoomed in -->
     <meta name="format-detection" content="telephone=no"> <!-- disable auto telephone linking in iOS -->
-
     <title>{{siteName}}</title>
     <style type="text/css">
-
+        @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
         /* Resets: see reset.css for details */
         .ReadMsgBody { width: 100%; background-color: #ebebeb;}
         .ExternalClass {width: 100%; background-color: #ebebeb;}
         .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height:100%;}
-        body {-webkit-text-size-adjust:none; -ms-text-size-adjust:none;}
+        body {-webkit-text-size-adjust:none; -ms-text-size-adjust:none;font-family:'Montserrat', serif;}
         body {margin:0; padding:0;}
         table {border-spacing:0;}
         table td {border-collapse:collapse;}
@@ -53,18 +52,16 @@
           border-radius: 3px 3px 0px 0px;
         }
         .heading-container, .logo{
-          text-align: center;
           color: white;
-          font-family: Helvetica, sans-serif;
           font-weight: bold;
-          font-size: 20px;          
+          font-size: 20px;
+          margin-right:10px;          
         }
         .main-container{
           line-height: 1.7;
           background: white;
           padding: 0 30px;
           font-size: 15px;
-          font-family: Helvetica, sans-serif;
           color: #555;
         }
         .heading{
@@ -74,8 +71,7 @@
           margin: 0;
         }
         .footer-container{
-          background: #ddd;
-          font-family: Helvetica, sans-serif;
+          background: #fff;
           padding: 30px;
           color: #777;
           border-radius: 0px 0px 3px 3px;
@@ -90,6 +86,23 @@
           border-top: 1px solid #ddd;
           border-bottom: 1px solid #ddd;
           padding: 10px 0;
+        }
+        .site-title {
+          color:#da552f;
+          font-size:18px;
+        }
+        .site-tagline {
+          font-size:14px;
+          color:#999;
+        }
+        .avatar {
+          -webkit-border-radius:50%;
+          border-radius:50%;
+          height:40px;
+          width:40px;
+          -webkit-background-size:100% 100%;
+          -moz-background-size:100% 100%;
+          background-size:100% 100%;
         }
     </style>
 </head>
@@ -107,7 +120,13 @@
         <tr>
           <td class="heading-container">
             {{#if logoUrl}}
-              <img class="logo" src="{{logoUrl}}" height="{{logoHeight}}" width="{{logoWidth}}" alt="{{siteName}}"/>
+              <div style="margin: 0 auto;width:55%;">
+              <img class="logo" src="{{logoUrl}}" height="{{logoHeight}}" width="{{logoWidth}}" alt="{{siteName}}" style="float:left;"/>
+              <div style="float:left;text-align:left;line-height:1.5;">
+              <div class="site-title">{{siteName}}</div>
+              <div class="site-tagline">Innovazione condivisa, ogni giorno</div>
+              </div>
+              </div>
             {{else}}
               {{siteName}}
             {{/if}}
@@ -123,7 +142,7 @@
         </tr>
         <tr>
           <td class="footer-container">
-            <a href="{{accountLink}}">Change your notifications settings</a><br/><br/>
+            <a href="{{accountLink}}">Modifica le impostazioni delle notifiche</a><br/><br/>
             {{{footer}}}
           </td>
         </tr>

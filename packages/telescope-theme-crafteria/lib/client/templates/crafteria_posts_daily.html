@@ -1,0 +1,34 @@
+<template name="crafteriaPostsDaily">
+  <div class="page-container">
+  
+    <div class="grid">
+
+      <!--<h1 class="posts-today-heading">Today</h1>-->
+      {{#each days}}
+        {{#if showDailyPost}}
+        <h2 class="posts-day-heading">
+          <span class="posts-today-heading">{{dayName date index}}</span>{{formatDate date " MMMM Do"}}
+          {{#if firstDay index}}
+            {{> crafteriaSearch}}
+          {{/if}}
+        </h2>
+        <div class="posts-wrapper posts-day posts list grid-module">
+          {{#if posts}}
+            {{#each posts}}
+              {{> UI.dynamic template=post_item}}
+            {{/each}}
+          {{else}}
+            
+              <p class="empty-day-notice">{{i18n "Sorry, no posts for that day."}}</p>
+        
+          {{/if}}
+        </div>
+        {{/if}}
+      {{/each}}
+      {{#if morePosts}}
+      <a class="more-button grid-module" href="{{loadMoreUrl}}"><span>{{i18n "Load more"}}</span></a>
+      {{/if}}
+    </div>
+  
+  </div>
+</template>

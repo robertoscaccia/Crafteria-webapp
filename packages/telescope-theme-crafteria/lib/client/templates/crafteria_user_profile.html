@@ -27,7 +27,7 @@
 						{{#each tabs user}}
 							<li class='profile-tab {{#if isActive postType}}active{{/if}}'>
 								<strong>{{typeCount ..}}</strong>
-								{{typeString}}
+								{{i18n typeString}}
 							</li>
 						{{/each}}
 					</ul>
@@ -39,8 +39,8 @@
 				<table>
 					<thead>
 						<tr>
-							<td class="comment-col">Post</td>
-							<td>Comment</td>
+							<td class="comment-col">{{i18n "Post"}}</td>
+							<td>{{i18n "Comment"}}</td>
 							<td class="comment-col"></td>
 						</tr>
 					</thead>

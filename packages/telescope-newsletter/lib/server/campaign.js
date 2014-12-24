@@ -22,7 +22,6 @@ getCampaignPosts = function (postsCount) {
 
 buildCampaign = function (postsArray) {
   var postsHTML = '', subject = '';
-
   // 1. Iterate through posts and pass each of them through a handlebars template
   postsArray.forEach(function (post, index) {
     if(index > 0)
@@ -38,7 +37,8 @@ buildCampaign = function (postsArray) {
       postLink: getPostLink(post),
       profileUrl: getProfileUrl(postUser),
       postPageLink: getPostPageUrl(post),
-      date: moment(post.postedAt).format("MMMM D YYYY")
+      date: moment(post.postedAt).format("MMMM D YYYY"),
+      avatarUrl: postUser.services.twitter.profile_image_url
     });
 
     if (post.body)

@@ -6,10 +6,7 @@
       {{/each}}
     </h3>
     <div class="post-meta">
-      {{{htmlBody}}}
-      <!--{{#each postMeta}}
-        {{> UI.dynamic template=getTemplate data=..}}
-      {{/each}}-->
+      <p>{{truncatedBody htmlBody}}</p>
     </div>
   </div>
 </template>

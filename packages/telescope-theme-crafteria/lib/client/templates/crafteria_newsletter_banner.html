@@ -1,0 +1,17 @@
+<template name="crafteriaNewsletterBanner">
+	{{#if showBanner}}
+  <div class="page-container">
+    <div class="newsletter-banner grid-module grid">
+      <form>
+        <h4 class="newsletter-tagline">{{i18n "Receive the best of Crafteria right in your inbox"}}</h4>
+        {{#if isNotConnected}}
+          <input class="newsletter-email" type="email" placeholder="Email Address">
+        {{/if}}
+        <button class="button newsletter-button">{{i18n "Get Newsletter"}}<span class="button-loader"><img src="/img/loading-balls.svg"/></span></button>
+      </form>
+      <h4 class="newsletter-subscribed">{{i18n "Thanks for subscribing!"}}</h4>
+      <a href="#" class="newsletter-dismiss">×</a>
+    </div>
+  </div>
+  {{/if}}
+</template>
