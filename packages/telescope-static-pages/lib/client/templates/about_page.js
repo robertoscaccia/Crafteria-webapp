@@ -1,8 +1,5 @@
 Template.aboutPage.events({
-	'click .leader-button': function() {
-		Router.go('/leader');
-	},
-	'click .share-button': function() {
-		Router.go('/share');
+	'click .registrati-button': function() {
+		Router.go('/sign-up');
 	}
 });
