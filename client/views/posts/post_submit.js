@@ -21,7 +21,11 @@ Template[getTemplate('post_submit')].helpers({
       return 'hidden'
     }
     // return (Session.get('currentPostStatus') || STATUS_APPROVED) == STATUS_APPROVED; // default to approved
+  },
+  isEarlyClaim: function () {
+    return  Meteor.user().isEarlyClaim || false;
   }
+
 });
 
 Template[getTemplate('post_submit')].rendered = function(){
@@ -61,11 +65,11 @@ Template[getTemplate('post_submit')].events({
     // ------------------------------ Properties ------------------------------ //
 
     // Basic Properties
-
     var properties = {
       title: $('#title').val(),
       body: instance.editor.exportFile(),
       sticky: $('#sticky').is(':checked'),
+      earlyclaim: $('#earlyclaim').is(':checked'),
       userId: $('#postUser').val(),
       status: parseInt($('input[name=status]:checked').val())
     };
@@ -129,7 +133,7 @@ Template[getTemplate('post_submit')].events({
         }
       });
     } else {
-      $(e.target).removeClass('disabled');      
+      $(e.target).removeClass('disabled');
     }
 
   },

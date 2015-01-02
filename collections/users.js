@@ -50,7 +50,7 @@ Meteor.users.deny({
   update: function(userId, post, fieldNames, modifier) {
     var updates = modifier['$set'];
     //deny updates when a user bio is over 50 characters
-    if (updates['profile.bio'] && updates['profile.bio'].length > 50)
+    if (updates && updates['profile.bio'] && updates['profile.bio'].length > 50)
       return true;
 
     if(isAdminById(userId))

@@ -17,6 +17,9 @@ Template[getTemplate('user_item')].helpers({
   userIsAdmin: function(){
     return isAdmin(this);
   },
+  isEarlyClaim: function () {
+    return this.isEarlyClaim || false;
+  },
   getProfileUrl: function () {
     return getProfileUrl(this);
   },
@@ -49,6 +52,23 @@ Template[getTemplate('user_item')].events({
   'click .unadmin-link': function(e, instance){
     e.preventDefault();
     updateAdmin(instance.data._id, false);
+  },
+  //Early Claim events
+  'click .early-link': function(e, instance){
+    e.preventDefault();
+     Meteor.users.update(instance.data._id,{
+      $set:{
+        isEarlyClaim: true
+      }
+    });
+  },
+  'click .unearly-link': function(e, instance){
+    e.preventDefault();
+     Meteor.users.update(instance.data._id,{
+      $unset:{
+        isEarlyClaim: "" //remove from db. save space
+      }
+    });
   },
   'click .delete-link': function(e, instance){
     e.preventDefault();
