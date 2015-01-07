@@ -82,6 +82,10 @@ postSchemaObject = {
     type: Boolean,
     optional: true
   },
+  earlyclaim_url: {
+    type: String,
+    optional: true
+  },
   inactive: {
     type: Boolean,
     optional: true

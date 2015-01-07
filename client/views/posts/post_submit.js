@@ -24,6 +24,9 @@ Template[getTemplate('post_submit')].helpers({
   },
   isEarlyClaim: function () {
     return  Meteor.user().isEarlyClaim || false;
+  },
+  isCheckedEarlyClaim: function () {
+    return Session.get('isCheckedEarlyClaim');
   }
 
 });
@@ -73,6 +76,11 @@ Template[getTemplate('post_submit')].events({
       userId: $('#postUser').val(),
       status: parseInt($('input[name=status]:checked').val())
     };
+
+    // EarlClaim URL
+    if (properties.earlyclaim) {
+      properties.earlyclaim_url = $('#earlyclaim_url').val()
+    }
 
     // PostedAt
 
@@ -155,6 +163,10 @@ Template[getTemplate('post_submit')].events({
       alert("Please fill in an URL first!");
       $getTitleLink.removeClass("loading");
     }
+  },
+  'click #earlyclaim': function (evt, template) {
+    Session.set('isCheckedEarlyClaim', $('#earlyclaim').is(':checked'));
   }
+
 
 });
