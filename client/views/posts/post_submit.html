@@ -14,16 +14,32 @@
         <div class="controls" id="editor"><textarea id="body" value="" class="input-xlarge"></textarea></div>
       </div>
       {{#if categoriesEnabled}}
-      <div class="control-group">
-        <label class="control-label">{{i18n "Category"}}</label>
-        <div class="controls">
-          {{#each categories}}
-          <label class="radio inline">
-            <input id="category_{{_id}}" type="checkbox" value="{{_id}}" name="category" /> {{name}}
-          </label>
-          {{/each}}
+        <div class="control-group">
+          <label class="control-label">{{i18n "Category"}}</label>
+          <div class="controls">
+            {{#each categories}}
+            <label class="radio inline">
+              <input id="category_{{_id}}" type="checkbox" value="{{_id}}" name="category" /> {{name}}
+            </label>
+            {{/each}}
+          </div>
         </div>
-      </div>
+      {{/if}}
+      {{#if isEarlyClaim}}
+         <div class="control-group">
+          <label class="control-label">{{i18n "Early Claim?"}}</label>
+          <div class="controls">
+            <input type="checkbox" name="earlyclaim" id="earlyclaim" />
+          </div>
+        </div>
+      {{/if}}
+      {{#if isCheckedEarlyClaim}}
+        <div class="control-group">
+          <label class="control-label">{{i18n "Early Claim Page"}}</label>
+          <div class="controls">
+            <input type="text" name="earlyclaim_url" id="earlyclaim_url" />
+          </div>
+        </div>
       {{/if}}
       {{#if isAdmin}}
         <div class="control-group">
@@ -51,7 +67,7 @@
             <label class="radio inline">
               <input id="status_approved" type="radio" value="2" name="status" checked /> {{i18n "Approved"}}
             </label>
-            <label class="radio inline">  
+            <label class="radio inline">
               <input id="status_rejected" type="radio" value="3" name="status"/> {{i18n "Rejected"}}
             </label>
           </div>

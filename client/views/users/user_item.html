@@ -23,10 +23,12 @@
 	</td>
 	<td>{{#if isInvited}}<i class="icon-check"></i>{{/if}}</td>
 	<td>{{#if userIsAdmin}}<i class="icon-check"></i>{{/if}}</td>
+	<td>{{#if isEarlyClaim}}<i class="icon-check"></i>{{/if}}</td>
 	<td>
 		<ul>
 			<li>{{#if isInvited}}<a class="uninvite-link" href="#">{{i18n "Uninvite"}}</a>{{else}}<a href="#" class="invite-link">{{i18n "Invite"}}</a>{{/if}}</li>
 			<li>{{#if userIsAdmin}}<a class="unadmin-link" href="#">{{i18n "Unadmin"}}</a>{{else}}<a href="#" class="admin-link">{{i18n "Make admin"}}</a>{{/if}}</li>
+			<li>{{#if isEarlyClaim}}<a class="unearly-link" href="#">{{i18n "UnEarlyClaim"}}</a>{{else}}<a href="#" class="early-link">{{i18n "Make EarlyClaim"}}</a>{{/if}}</li>
 			<li><a class="delete-link" href="#">{{i18n "Delete User"}}</a></li>
 		</ul>
 	</td>
