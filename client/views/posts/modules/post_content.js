@@ -1,4 +1,4 @@
-postHeading.splice(1)
+postHeading.splice(1,1)
 
 Template[getTemplate('postContent')].helpers({
   postHeading: function () {
@@ -35,7 +35,7 @@ Template[getTemplate('postContent')].helpers({
   truncatedBody: function(body) {
     if (!body)
       return "";
-    
+
     var description = stripHTML(body);
     if (description.length > 80) {
       description = description.substring(0,80) + "...";
