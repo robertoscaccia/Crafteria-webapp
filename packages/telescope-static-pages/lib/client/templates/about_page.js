@@ -3,3 +3,4 @@ Template.aboutPage.events({
 		Router.go('/sign-up');
 	}
 });
+
