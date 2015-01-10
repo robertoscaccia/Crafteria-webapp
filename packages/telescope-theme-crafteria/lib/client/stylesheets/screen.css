@@ -316,8 +316,7 @@ header .icon-plus {
   height:28px;
   margin-right:4px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 .edit-items form .control-group.inline .edit-item {
   width:65%;
 }
@@ -328,6 +327,18 @@ header .icon-plus {
   font-size:16px;
   color:#999;
 }
+
+.post.earlyclaim.title{
+  color: #3F403F;
+}
+.post.earlyclaim .img-earlyclaim {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid #333;
+  background: #31cc6f;
+}
+
 .event-calendar {
   height:40px;
   width:40px;
